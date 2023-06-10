@@ -1,0 +1,20 @@
+
+###
+POST http://localhost:3000/api/properties/6415344dd78b3751ceb24b8f/offers
+Content-Type: application/json
+
+{
+   "price":200,
+   "date":"2020-03-10",
+   "status":"pending"
+}
+
+###
+DELETE  http://localhost:3000/api/properties/6415344dd78b3751ceb24b8f/offers/6415344dd78b3751ceb24b90
+
+###
+ PUT http://localhost:3000/api/properties/641535b2d78b3751ceb24ba0/offers/641535b2d78b3751ceb24ba1
+Content-Type: application/json
+
+{"status":"rejected"}
+

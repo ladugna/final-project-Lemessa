@@ -1,0 +1,45 @@
+###
+GET http://localhost:3000/api/properties
+
+###
+POST http://localhost:3000/api/properties
+Content-Type: application/json
+
+{
+   "description":"Good House Ever",
+   "address":{
+      "state":"FL",
+      "city":"Iowa",
+      "street":" 1000 N 4th St",
+      "zip":"44314"
+   },
+   "type":"Apartment",
+   "price":2000,
+   "number_of_bedrooms":2,
+   "number_of_bathrooms":1,
+   "status":"available",
+   "images":"image1",
+   "user":{
+      "email":"lemessa@miu.edu",
+      "name":"Lemessa3"
+   },
+   "offers":[
+      {
+         "price":2500,
+         "date":"2022-03-10",
+         "status":"accepted"
+      }
+   ]
+}
+
+###
+DELETE  http://localhost:3000/api/properties/641606b8a8e309ff31de4582
+###
+GET http://localhost:3000/api/properties/641606b8a8e309ff31de4582
+Content-Type: application/json
+
+###
+ PUT http://localhost:3000/api/properties/641535b2d78b3751ceb24ba0
+Content-Type: application/json
+
+{"price":2600}
