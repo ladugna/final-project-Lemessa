@@ -1,0 +1,23 @@
+<header>
+  
+  <div class="logo">
+    <a routerLink="/">
+      MWA Project
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a
+          *ngIf="currentUser.role == 'owner'"
+          routerLink="properties/addProperty"
+          >Add New Property</a
+        >
+      </li>
+      <li><a *ngIf="currentUser && currentUser._id != ''" routerLink="myOffers">My Offers</a></li>
+      <li><a *ngIf="currentUser && currentUser._id == ''" routerLink="/login">Login</a></li>
+      <li><a *ngIf="currentUser && currentUser._id == ''" routerLink="/signup">Sign Up</a></li>
+      <li><a *ngIf="currentUser && currentUser._id != ''" (click)="logout()">Logout</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,93 @@
+<div>
+  <!-- <div class="bg-image"></div> -->
+  <div class="filter-container">
+    <form
+      [formGroup]="filterForm"
+      (ngSubmit)="filterProperties()"
+      class="filter-form"
+    >
+      <label for="state">State:</label>
+      <input type="text" id="state" formControlName="state" />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city" />
+
+      <label for="street">Street:</label>
+      <input type="text" id="street" formControlName="street" />
+
+      <label for="zip">Zip:</label>
+      <input type="text" id="zip" formControlName="zip" />
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" formControlName="price" step="100" />
+
+      <label for="number_of_bedrooms">Bedrooms:</label>
+      <select id="number_of_bedrooms" formControlName="number_5of_bedrooms">
+        <option value="">All</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+
+      <label for="number_of_bathrooms">Bathrooms:</label>
+      <select id="number_of_bathrooms" formControlName="number_of_bathrooms">
+        <option value="">All</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+
+      <label for="status">Status:</label>
+      <select id="status" formControlName="status">
+        <option value="">All</option>
+        <option value="Available">Available</option>
+        <option value="Sold">Sold</option>
+      </select>
+
+      <button type="submit">Filter</button>
+    </form>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<div class="property-list-container">
+  <div
+    class="property-card"
+    *ngFor="let property of properties"
+    (click)="goToPropertyDetails(property._id)"
+  >
+    <div *ngIf="property">
+      <ng-image-slider
+        [imageSize]="{ width: '100%', height: 250 }"
+        [images]="imgCollection"
+        slideImage="1"
+        [showArrow]="false"
+        [infinite]="true"
+        [autoSlide]="4"
+        #nav
+      ></ng-image-slider>
+      <div class="property-details">
+        <h2>
+          {{ property.address.street }} , {{ property.address.city }},
+           {{ property.address.street }}
+          {{ property.address.state }} {{ property.address.zip }} -
+          <span class="color-red">{{ property.price | currency }}</span>
+        </h2>
+        <p>{{ property.type }} | {{ property.status }}</p>
+        <p>
+          {{ property.number_of_bedrooms }} Bedrooms |
+          {{ property.number_of_bathrooms }} Bathrooms
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

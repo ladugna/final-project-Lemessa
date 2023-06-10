@@ -1,0 +1,123 @@
+.property-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.property-card {
+  flex-basis: 25%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 50%;
+}
+
+.property-card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-details {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.property-details h2 {
+  margin-top: 0;
+}
+
+.property-details p {
+  margin-bottom: 5px;
+}
+.color-red {
+  color: rgb(157, 0, 0);
+}
+.bg-image {
+  background-image: url("../../../assets/homepage.jpg");
+  background-size: contain;
+  position: fixed;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.filter-container {
+  background-image: url("../../../assets/homepage.jpg");
+  background-size: cover;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-form label {
+  flex: 1;
+  /* margin: 5px; */
+  display: inline-block;
+  /* width: 50px; */
+  margin-left: 50px;
+}
+
+.filter-form input[type="text"],
+.filter-form input[type="number"],
+.filter-form select {
+  flex: 1;
+  margin: 5px;
+  display: inline-block;
+  width: calc(100% - 110px);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.property-card {
+  width: 90%;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-card h2 {
+  margin: 20px;
+}
+
+.property-card ul {
+  margin: 20px;
+}
+
+.property-card li {
+  list-style: none;
+  margin-bottom: 5px;
+}

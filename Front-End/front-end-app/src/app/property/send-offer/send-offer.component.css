@@ -1,0 +1,45 @@
+/* style for the form labels */
+.send-offer-popup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* style for the form inputs */
+.send-offer-popup input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* style for the form buttons */
+.send-offer-popup button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* style for the primary button */
+.send-offer-popup .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+/* style for the secondary button */
+.send-offer-popup .btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+/* style for the form */
+.send-offer-popup form {
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

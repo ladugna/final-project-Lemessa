@@ -1,0 +1,26 @@
+<div class="signup-container">
+  <h2>Sign up</h2>
+  <form>
+    <label>
+      Full name
+      <input type="text" name="name" [(ngModel)]="name" required />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" [(ngModel)]="email" required />
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" [(ngModel)]="password" required />
+    </label>
+    <label>
+      User Role
+      <select name="role" [(ngModel)]="role" required>
+        <option value="">Select role</option>
+        <option value="owner">Owner</option>
+        <option value="customer">Customer</option>
+      </select>
+    </label>
+    <button type="submit" (click)="signup()">Sign up</button>
+  </form>
+</div>

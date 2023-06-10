@@ -1,0 +1,47 @@
+<div class="send-offer-popup">
+  <form (ngSubmit)="onSubmit()">
+    <h2>Send Offer</h2>
+    
+    <div class="form-group">
+      <label for="price">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        [(ngModel)]="offer.title"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">Description </label>
+      <input
+        type="text"
+        class="form-control"
+        id="description "
+        name="description "
+        [(ngModel)]="offer.description"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        name="price"
+        [(ngModel)]="offer.price"
+        required
+      />
+    </div>
+    <br/>
+    <br/>
+    <div class="buttons-style">
+      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="cancel" class="btn btn-secondery" (click)="OnCancel()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

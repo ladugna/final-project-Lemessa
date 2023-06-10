@@ -1,0 +1,36 @@
+<ng-image-slider
+  [imageSize]="{ width: '50%', height: 450 }"
+  [images]="imgCollection"
+  slideImage="1"
+  [autoSlide]="1"
+  #nav
+></ng-image-slider>
+<div class="property-details" *ngIf="propertyDetails">
+  <br />
+  <br />
+  <h2>{{ propertyDetails.type }} - {{ propertyDetails.status }}</h2>
+  <div class="address">
+    <p>{{ propertyDetails.address.street }}</p>
+    <p>
+      {{ propertyDetails.address.city }}, {{ propertyDetails.address.state }}
+      {{ propertyDetails.address.zip }}
+    </p>
+  </div>
+  <div class="details">
+    <p><strong>Description:</strong> {{ propertyDetails.description }}</p>
+    <div class="inline">
+      <p><strong>Price:</strong> {{ propertyDetails.price | currency }} |</p>
+      <p class="pl-2">
+        {{ propertyDetails.number_of_bedrooms }} <strong>bed</strong> |
+      </p>
+      <p class="pl-2">
+        {{ propertyDetails.number_of_bathrooms }} <strong>bath</strong>
+      </p>
+    </div>
+  </div>
+  <div
+    *ngIf="currentUser.role == 'customer' && propertyDetails.status != 'Sold'"
+  >
+    <button (click)="showPopup()">Send Offer</button>
+  </div>
+</div>

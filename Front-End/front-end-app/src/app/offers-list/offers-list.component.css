@@ -1,0 +1,57 @@
+.offers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .offers-table th,
+  .offers-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .offers-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .offer-row:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .status-pending {
+    color: #ffa500;
+  }
+  
+  .status-accepted {
+    color: #2ecc71;
+  }
+  
+  .status-rejected {
+    color: #e74c3c;
+  }
+  
+  .accept-btn,
+  .reject-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .accept-btn {
+    background-color: #2ecc71;
+  }
+  
+  .reject-btn {
+    background-color: #e74c3c;
+  }
+  
+  .accept-btn:hover,
+  .reject-btn:hover {
+    opacity: 0.8;
+  }
+  

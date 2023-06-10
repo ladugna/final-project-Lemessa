@@ -1,0 +1,52 @@
+<table class="offers-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Original Price</th>
+      <th>Price</th>
+      <th>Location</th>
+      <th>Buyer Email</th>
+      <!-- <th>Expiration Date</th> -->
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let offer of offers" classbuyerEmail="offer-row">
+      <td>{{ offer.title }}</td>
+      <td>{{ offer.description }}</td>
+      <td>{{ offer.originalPrice | currency }}</td>
+      <td>{{ offer.price | currency }}</td>
+      <td>
+        {{ offer.street }} , {{ offer.city }},
+        {{ offer.state }} {{ offer.zip }}
+      </td>
+      <!-- <td>{{ offer.expiration_date | date }}</td> -->
+      <td>{{ offer.buyerEmail }}</td>
+      <td>
+        <span
+          *ngIf="offer.status"
+          [class]="'status-' + offer.status.toLowerCase()"
+          >{{ offer.status }}</span
+        >
+      </td>
+      <td
+        *ngIf="
+          offer.property_status == 'Available' && currentUser.role == 'owner'
+        "
+      >
+        <button class="accept-btn" (click)="acceptOffer(offer)">Accept</button>
+        <button class="reject-btn" (click)="rejectOffer(offer)">Reject</button>
+      </td>
+      <td
+        *ngIf="
+          offer.property_status == 'Available' && currentUser.role == 'customer'
+        "
+      >
+        <button class="accept-btn" (click)="deleteOffer(offer)">Delete</button>
+      </td>
+    </tr>
+    <!-- </span> -->
+  </tbody>
+</table>
